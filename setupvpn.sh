@@ -1,4 +1,3 @@
-#!/bin/bash
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
@@ -13,6 +12,6 @@ EOF
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv E162F504A20CDF15827F718D4B7C549A058F8B6B
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 sudo apt-get update -y
-sudo apt-get --assume-yes install pritunl mongodb-server
+sudo apt-get --assume-yes install pritunl mongodb-server iptables
 sudo systemctl start pritunl mongodb
 sudo systemctl enable pritunl mongodb
