@@ -22,3 +22,9 @@ variable subnet_id {
 variable service_account_key_file {
   description = "key .json"
 }
+variable private_ssh_path {
+  description = "Path to the private ssh key to connect via provision"
+}
+variable count_app {
+  default = 1
+}

@@ -1,4 +1,5 @@
 provider "yandex" {
+  version = "0.77"
   service_account_key_file = var.service_account_key_file
   cloud_id                 = var.cloud_id
   folder_id                = var.folder_id
@@ -6,7 +7,9 @@ provider "yandex" {
 }
 
 resource "yandex_compute_instance" "app" {
-  name = "reddit-app"
+  count = var.count_app * 2
+  name = "reddit-app-${count.index}"
+  zone  = var.zone
 
   resources {
     cores  = 2
@@ -36,14 +39,14 @@ resource "yandex_compute_instance" "app" {
     user  = "ubuntu"
     agent = false
     # путь до приватного ключа
-    private_key = file("C:/Users/Acer/.ssh/id_rsa")
+    private_key = filefile(var.private_ssh_path))
   }
 
   provisioner "file" {
-    source      = "C:/Users/Acer/Desktop/DevOps/OTUS/Lesson8/HW/BigBrather_infra/terraform/files/puma.service"
+    source      = "files/puma.service"
     destination = "/tmp/puma.service"
   }
   provisioner "remote-exec" {
-    script = "C:/Users/Acer/Desktop/DevOps/OTUS/Lesson8/HW/BigBrather_infra/terraform/files/deploy.sh"
+    script = "files/deploy.sh"
   }
 }
