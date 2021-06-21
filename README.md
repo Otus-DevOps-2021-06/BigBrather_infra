@@ -1,5 +1,5 @@
 # BigBrather_infra
-fREEZY503 Infra repository
+BigBrather Infra repository
 
 Способ подключения к someinternalhost в одну команду: ssh -J appuser@bastion_ip appuser@privat_someinternalhost_ip
 ---
