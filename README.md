@@ -15,7 +15,7 @@ testapp_port = 9292
 
 HomeWork №7
 ---
-При выполнении домашнего задания с лекции №8, было выполнено:
+При выполнении домашнего задания с лекции №7, было выполнено:
  1) Основное задание (создание образа с помощью шаблона "Packer"): packer build -var-file=./packer/variables.json ./packer/ubuntu16.json
 
 HomeWork №7
