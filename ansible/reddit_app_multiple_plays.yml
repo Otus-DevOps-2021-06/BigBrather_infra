@@ -73,3 +73,4 @@
       daemon_reload: true # Выполнение перезагрузки демонов после изменения сервиса
       name: puma-reddit
       state: restarted
+      
