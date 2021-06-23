@@ -1,11 +1,10 @@
 # BigBrather_infra
 BigBrather Infra repository
 
-Способ подключения к someinternalhost в одну команду: ssh -J appuser@bastion_ip appuser@privat_someinternalhost_ip
----
-
 HomeWork №5
 ---
+Способ подключения к someinternalhost в одну команду:
+ssh -J appuser@bastion_ip appuser@privat_someinternalhost_ip
 bastion_IP = 178.154.200.77 someinternalhost_IP = 10.128.0.5
 
 HomeWork №6
