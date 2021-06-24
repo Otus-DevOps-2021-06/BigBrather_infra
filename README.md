@@ -51,3 +51,13 @@ HomeWork №11
  2) Разработы Ansible playbook для instans с application, data base и deploy;
  3) Запуск playbook в нужном порядке производиться командой (ansible-playbook site.yml);
  4) Сборки образов Packer были изменены provisioners на Ansible packer_app.yml и packer_db.yml.
+
+HomeWork №12
+---
+При выполнении домашнего задания с лекции №11, было выполнено:
+ 1) Создана ветка ansible-3;
+ 2) Созданы раздельные роли - app и db;
+ 3) Описаны окружения prod и stage;
+ 4) Созданы пользователи, проведена работа с Ansible Vault;
+ 5) Выполнение playbook в stage окружении: ""ansible-playbook playbooks/site.yml""
+ 6) Выполнение playbook в prod окружении: ""ansible-playbook -i environments/prod/inventory playbooks/site.yml""
