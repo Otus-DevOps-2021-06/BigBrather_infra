@@ -43,3 +43,11 @@ HomeWork №10
  6) Написание inventory.yml;
  7) Написание PlayBook сlone.yml (клонирование репозитория);
 При выполнении PlayBook с уже склонированным репозиторием, никаких изменений на ВМ не происходит, поэтому значение changed=0. После удаления репозитория и выполнения PlayBook, происходит новое клонирование репозитория, изменения применяются changed=1.
+
+HomeWork №11
+---
+При выполнении домашнего задания с лекции №11, было выполнено:
+ 1) Создана ветка ansible-2;
+ 2) Разработы Ansible playbook для instans с application, data base и deploy;
+ 3) Запуск playbook в нужном порядке производиться командой (ansible-playbook site.yml);
+ 4) Сборки образов Packer были изменены provisioners на Ansible packer_app.yml и packer_db.yml.
