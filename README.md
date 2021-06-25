@@ -61,3 +61,12 @@ HomeWork №12
  4) Созданы пользователи, проведена работа с Ansible Vault;
  5) Выполнение playbook в stage окружении: **ansible-playbook playbooks/site.yml**;
  6) Выполнение playbook в prod окружении: **ansible-playbook -i environments/prod/inventory playbooks/site.yml**.
+
+HomeWork №13
+---
+При выполнении домашнего задания с лекции №13, было выполнено:
+ 1) Создана ветка ansible-4;
+ 2) Запуск машин с помощью Vagrant: **vagrant up**;
+ 3) Удаление машин: **vagrant destroy --force**;
+ 4) Проксирование приложения с помощью **nginx**;
+ 5) Произведено тестирование роли db (v. **molecule=2.22**).
