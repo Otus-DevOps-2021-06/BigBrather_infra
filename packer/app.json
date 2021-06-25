@@ -2,24 +2,32 @@
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "{{ user `service_account_key_file` }}",
-            "folder_id": "{{ user `folder_id` }}",
-            "source_image_id": "{{ user `source_image_id` }}",
-            "image_name": "reddit-app-base",
+            "service_account_key_file": "{{user `key`}}",
+            "folder_id": "{{user `folder_id`}}",
+            "source_image_id": "{{user `source_image_id`}}",
+            "image_name": "reddit-app-base-ansible-molecule",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
-            "platform_id": "standard-v2",
-            "disk_type": "{{ user `disk_type` }}",
-            "subnet_id": "{{ user `subnet_id` }}",
-            "use_ipv4_nat": "true"
+            "platform_id": "standard-v1",
+            "use_ipv4_nat": "true",
+            "disk_type": "network-hdd"
         }
     ],
     "provisioners": [
         {
             "type": "ansible",
             "playbook_file": "ansible/playbooks/packer_app.yml",
-            "extra_arguments": ["--tags", "ruby"],
-            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"]
+            "user": "ubuntu",
+            "groups": [
+                "app"
+            ],
+            "extra_arguments": [
+                "--tags",
+                "ruby"
+            ],
+            "ansible_env_vars": [
+                "ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"
+            ]
         }
     ]
 }
